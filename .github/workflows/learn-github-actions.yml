@@ -1,9 +1,15 @@
+# [Actions]に表示されるワークフローの名前
 name: learn-github-actions
 on: [push]
+# learn-github-actionsで動くワークフロー
 jobs:
+  # 子キーを持つ
   check-bats-version:
+  # ジョブがGitHubによってホストされている新しい仮想マシンで実行されるということ
     runs-on: ubuntu-latest
+    # check-bats-versionジョブで実行されるすべてのステップをグループ化する
     steps:
+    # チェックアウトクションを使う
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
